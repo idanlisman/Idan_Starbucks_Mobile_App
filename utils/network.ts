@@ -14,9 +14,18 @@ class Network {
     return this._post(url, data, true);
   }
 
+  async get(url: string): AxiosPromise {
+    return this._get(url);
+  }
+
   private async _post(url: string, data: Object, isAuth: boolean): AxiosPromise {
     const headers: HeadersParamType = await this.getHeaders(isAuth);
     return axios.post(url, data, { headers });
+  }
+
+  private async _get(url: string): AxiosPromise {
+    const headers: HeadersParamType = await this.getHeaders(true);
+    return axios.get(url, { headers });
   }
 
   private async getHeaders(isAuth: boolean): Promise<HeadersParamType> {

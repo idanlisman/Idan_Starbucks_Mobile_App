@@ -25,8 +25,8 @@ const Button = ({ title, style, height, width, fontSize, isDark, onPress }: Butt
 const mainStyle = StyleSheet.create({
   pressable: {
     margin: 10,
-    borderRadius: 5,
     alignItems: "center",
+    borderRadius: 5,
     justifyContent: "center",
   },
   text: {

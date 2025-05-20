@@ -56,6 +56,8 @@ const SignUpScreen = ({ navigation }: SignUpScreenPropsType) => {
       setClearInputsHandler();
       navigate(start, "Main");
     } catch (err) {
+      console.log(err);
+      
       navigate(start, "SignUp");
     }
   };

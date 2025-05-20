@@ -19,6 +19,7 @@ const RootLayout = () => {
   const [isLoad] = useFonts({
     SantanaBlack: require("@/assets/fonts/Santana-Black.ttf"),
     Santana: require("@/assets/fonts/Santana.ttf"),
+    SantanaRegularCondensed: require("@/assets/fonts/Santana-RegularCondensed.ttf"),
   });
 
   useEffect(() => {

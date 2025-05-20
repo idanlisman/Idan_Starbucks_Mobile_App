@@ -24,7 +24,7 @@ const LoginScreen = ({ navigation }: LoginScreenPropsType) => {
 
   const onPressLoginHandler = async () => {
     const start: number = Date.now();
-    // if (!(await isReqValid())) return;
+    if (!isReqValid()) return;
 
     try {
       setIsLoading(true);
@@ -40,11 +40,12 @@ const LoginScreen = ({ navigation }: LoginScreenPropsType) => {
     }
   };
 
-  // const isReqValid = (): boolean => {
-  //   const isFieldsValid = username !== "" && password !== "";
-  //   if (isFieldsValid)
-  //   return true;
-  // };
+  const isReqValid = (): boolean => {
+    const isFieldsValid = username !== "" && password !== "";
+    if (isFieldsValid) return true;
+
+    return false;
+  };
 
   // const isFieldsNotNull = (): boolean => {
 
@@ -58,7 +59,7 @@ const LoginScreen = ({ navigation }: LoginScreenPropsType) => {
   return (
     <SignInView>
       <View style={styles.inputsMainContainer}>
-        <CredInput title="username" icon={<UserIcon />} clear={clearInput} warnings={["TODO"]} setValueProp={setUsername} />
+        <CredInput title="username" icon={<UserIcon />} clear={clearInput} warnings={[""]} setValueProp={setUsername} />
         <CredInput title="passwords" icon={<LockIcon />} clear={clearInput} secureText={true} setValueProp={setPassword} />
       </View>
       <View>

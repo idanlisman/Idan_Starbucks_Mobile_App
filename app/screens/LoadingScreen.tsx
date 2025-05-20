@@ -1,10 +1,12 @@
 import AppView from "@/components/views/appView";
 import { Image, StyleSheet } from "react-native";
 
+const LOADING_PIC = "@/assets/images/starbucks-logo-loading-gif.gif";
+
 const LoadingScreen = () => {
   return (
     <AppView>
-      <Image style={styles.image} source={require("@/assets/images/starbucks-logo-loading-gif.gif")} resizeMode="cover" />
+      <Image style={styles.image} source={require(LOADING_PIC)} resizeMode="cover" />
     </AppView>
   );
 };
