@@ -21,12 +21,13 @@ const MainScreen = ({ navigation }: MainScreenPropsType) => {
   //   requestPermission();
   // }, []);
   const onPress = async () => {
-    try {
-      const res: AxiosResponse = await network.securedPost(`${Consts.AUTH_BACKEND_SERVER_URL}/v1/dashboard/test`, {});
-      console.log(res.data.id);
-    } catch (err) {
-      console.log(err);
-    }
+    // try {
+    //   const res: AxiosResponse = await network.securedPost(`${Consts.AUTH_BACKEND_SERVER_URL}/v1/dashboard/test`, {});
+    //   console.log(res.data.id);
+    // } catch (err) {
+    //   console.log(err);
+    // }
+    setIsOpen(isOpen === true ? false : true);
   };
 
   // if (device == null) return;
